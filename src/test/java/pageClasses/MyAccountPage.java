@@ -6,21 +6,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class MyAccountPage extends BasePage {
 
-
-	@FindBy(className = "page-heading")
-	private WebElement pageHeading;
-	
 	@FindBy(xpath = ".//*[@id='center_column']/ul/li/a/span")
 	private WebElement homeButton;
 	
+	@FindBy(className = "info-account")
+	private WebElement pageHeading;
 	
 	public MyAccountPage(WebDriver driver) {
 		super(driver);
 	}
 	
 	public void verifyAccountPage(){
-		System.out.println(pageHeading.getText());
-	}
+			System.out.println(pageHeading.getText());
+			}
 	
 	public HomePage goToHomePage(){
 		homeButton.click();
