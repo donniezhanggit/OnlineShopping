@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class MyAccountPage extends BasePage {
 
-//	WebDriver driver;
-	
+
 	@FindBy(className = "page-heading")
 	private WebElement pageHeading;
 	
@@ -17,9 +16,6 @@ public class MyAccountPage extends BasePage {
 	
 	public MyAccountPage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
-//		this.driver = driver;
-//		PageFactory.initElements(driver, this);
 	}
 	
 	public void verifyAccountPage(){

@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class SignInPage extends BasePage {
 
-//	WebDriver driver;
 	
 	@FindBy(id = "email")
 	private WebElement email_id;
@@ -19,14 +18,10 @@ public class SignInPage extends BasePage {
 	
 	
 	public SignInPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		super(driver);
-//		this.driver = driver;
-//		PageFactory.initElements(driver, this);
 	}
 
 	public MyAccountPage login(String emailid,String pswd){
-		System.out.println("################# login ###################");
 		email_id.sendKeys(emailid);
 		password.sendKeys(pswd);
 		submitButton.click();

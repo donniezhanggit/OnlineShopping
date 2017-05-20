@@ -26,11 +26,7 @@ public class LoginLogoutTest {
 	@Before
 	public void beforetest(){
 		System.setProperty("webdriver.gecko.driver", "C:\\Roshu_selenium\\geckodriver-v0.13.0-win64\\geckodriver.exe");
-//		System.setProperty("webdriver.gecko.driver", "C:\\Roshu_selenium\\geckodriver.16\\geckodriver.exe");
-		System.out.println("New FirefoxDriver");
-
 		driver = new FirefoxDriver();
-//		System.out.println("New FirefoxDriver");
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -40,7 +36,6 @@ public class LoginLogoutTest {
 	
 	@After
 	public void aftertest(){
-		System.out.println("########### aftertest ###################");
 		driver.close();
 	}
 	

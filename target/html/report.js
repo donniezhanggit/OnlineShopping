@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 14246719034,
+  "duration": 15241418969,
   "status": "passed"
 });
 formatter.scenario({
@@ -37,7 +37,7 @@ formatter.match({
   "location": "LoginLogoutTest.i_go_to_signin_page()"
 });
 formatter.result({
-  "duration": 243787605,
+  "duration": 279812083,
   "status": "passed"
 });
 formatter.match({
@@ -54,18 +54,18 @@ formatter.match({
   "location": "LoginLogoutTest.i_enter_and_and_click_submit(String,String)"
 });
 formatter.result({
-  "duration": 3210931192,
+  "duration": 3323699132,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginLogoutTest.i_go_to_Account_page()"
 });
 formatter.result({
-  "duration": 63863,
+  "duration": 117462,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4607836,
+  "duration": 6087520,
   "status": "passed"
 });
 });
