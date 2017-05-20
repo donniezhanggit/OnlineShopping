@@ -3,30 +3,31 @@ package pageClasses;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class SignInPage {
+public class SignInPage extends BasePage {
 
-	WebDriver driver;
+//	WebDriver driver;
 	
 	@FindBy(id = "email")
-	public WebElement id;
+	private WebElement email_id;
 	
 	@FindBy(id = "passwd")
-	public WebElement password;
+	private WebElement password;
 	
 	@FindBy(id = "SubmitLogin")
-	public WebElement submitButton;
+	private WebElement submitButton;
 	
 	
 	public SignInPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		super(driver);
+//		this.driver = driver;
+//		PageFactory.initElements(driver, this);
 	}
 
 	public MyAccountPage login(String emailid,String pswd){
-		id.sendKeys(emailid);
+		System.out.println("################# login ###################");
+		email_id.sendKeys(emailid);
 		password.sendKeys(pswd);
 		submitButton.click();
 		return new MyAccountPage(driver);

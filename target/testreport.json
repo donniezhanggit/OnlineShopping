@@ -1,0 +1,90 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 14246719034,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginLogoutTest.beforetest()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Verify login functionality",
+        "description": "",
+        "id": "verify-order-placement-on-shoping-site;verify-login-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 4607836,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginLogoutTest.aftertest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 243787605,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I go to signin page",
+            "match": {
+              "location": "LoginLogoutTest.i_go_to_signin_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3210931192,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I enter \"loginid\" and \"password\" and click submit",
+            "match": {
+              "arguments": [
+                {
+                  "val": "loginid",
+                  "offset": 9
+                },
+                {
+                  "val": "password",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginLogoutTest.i_enter_and_and_click_submit(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63863,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I go to Account page",
+            "match": {
+              "location": "LoginLogoutTest.i_go_to_Account_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verify order placement on shoping site",
+    "description": "",
+    "id": "verify-order-placement-on-shoping-site",
+    "keyword": "Feature",
+    "uri": "OrderPlacement.feature"
+  }
+]

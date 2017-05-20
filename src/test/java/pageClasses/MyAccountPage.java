@@ -3,23 +3,23 @@ package pageClasses;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class MyAccountPage {
+public class MyAccountPage extends BasePage {
 
-	WebDriver driver;
+//	WebDriver driver;
 	
 	@FindBy(className = "page-heading")
-	public WebElement pageHeading;
+	private WebElement pageHeading;
 	
 	@FindBy(xpath = ".//*[@id='center_column']/ul/li/a/span")
-	public WebElement homeButton;
+	private WebElement homeButton;
 	
 	
 	public MyAccountPage(WebDriver driver) {
+		super(driver);
 		// TODO Auto-generated constructor stub
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+//		this.driver = driver;
+//		PageFactory.initElements(driver, this);
 	}
 	
 	public void verifyAccountPage(){
