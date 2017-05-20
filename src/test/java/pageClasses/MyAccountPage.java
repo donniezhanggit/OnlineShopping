@@ -3,6 +3,7 @@ package pageClasses;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MyAccountPage {
 
@@ -18,6 +19,7 @@ public class MyAccountPage {
 	public MyAccountPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	public void verifyAccountPage(){
@@ -26,7 +28,7 @@ public class MyAccountPage {
 	
 	public HomePage goToHomePage(){
 		homeButton.click();
-		return new HomePage();
+		return new HomePage(driver);
 	}
 
 }

@@ -5,25 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage {
+public class WomenPage {
 
 	WebDriver driver;
 	
-	@FindBy(className = "login")
-	public WebElement login;
+	@FindBy(id = "layered_category_8")
+	public WebElement dressCheckbox;
 	
-	
-	public LandingPage(WebDriver driver){
+	public WomenPage(WebDriver driver) {
+		// TODO Auto-generated constructor stub
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	public SignInPage goToSignInPage(){
-		
-		login.click();
-		return new SignInPage(driver);
-	}
-	
-	
+
 	
 }
