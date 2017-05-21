@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 17352075436,
+  "duration": 77292255327435,
   "status": "passed"
 });
 formatter.scenario({
@@ -36,7 +36,7 @@ formatter.step({
 formatter.match({
   "location": "LoginLogoutTest.i_go_to_signin_page()"
 });
-formatter.result({
+matter.result({
   "duration": 195096570,
   "status": "passed"
 });

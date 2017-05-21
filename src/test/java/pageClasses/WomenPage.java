@@ -1,7 +1,5 @@
 package pageClasses;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,30 +27,33 @@ public class WomenPage extends BasePage {
 	
 	public void selectShoppingCriteria() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		if(!categoryCheckboxDresses.isSelected()) {
 			categoryCheckboxDresses.click();
 		}
 		else{
 			System.out.println("categoryCheckboxDresses ALREADY selected");
 		}
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		if(!sizeCheckboxSmall.isSelected()) {
 			sizeCheckboxSmall.click();
 		}
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		if(!compositionCheckboxCotton.isSelected()) {
 			compositionCheckboxCotton.click();
 		}
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 	
 	public CartSummaryPage AddToCart() throws InterruptedException
 	{
 		
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(By.xpath(".//*[@id='center_column']/ul/li[1]/div/div[1]/div/a[1]/img"))).moveToElement(driver.findElement(By.xpath(".//*[@id='center_column']/ul/li/div/div[2]/div[2]/a[1]/span"))).click().build().perform();
-		Thread.sleep(2000);
+//		action.moveToElement(driver.findElement(By.xpath(".//*[@id='center_column']/ul/li[1]/div/div[1]/div/a[1]/img"))).moveToElement(driver.findElement(By.xpath(".//*[@id='center_column']/ul/li/div/div[2]/div[2]/a[1]/span"))).click().build().perform();
+		action.moveToElement(driver.findElement(By.xpath(".//*[@id='center_column']/ul/li[1]/div/div[1]/div/a[1]/img"))).build().perform();
+		Thread.sleep(3000);
+		action.moveToElement(driver.findElement(By.xpath(".//*[@id='center_column']/ul/li/div/div[2]/div[2]/a[1]/span"))).click().build().perform();
+		Thread.sleep(3000);
 		proceedToCheckoutButton.click();
 		return new CartSummaryPage(driver);
 	}

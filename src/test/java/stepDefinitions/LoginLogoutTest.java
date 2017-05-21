@@ -7,18 +7,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import pageClasses.HomePage;
-import pageClasses.LandingPage;
-import pageClasses.MyAccountPage;
-import pageClasses.SignInPage;
-import pageClasses.WomenPage;
+import pageClasses.*;
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class LoginLogoutTest {
+public class LoginLogoutTest<cartSummaryPage> {
 
 	public WebDriver driver;
 	LandingPage landingpage;
@@ -26,6 +23,8 @@ public class LoginLogoutTest {
 	MyAccountPage myaccountpage;
 	HomePage homePage;
 	WomenPage womenPage;
+	CartSummaryPage cartSummaryPage;
+	
 	
 	@Before("@setup")
 	public void beforetest(){
@@ -64,7 +63,8 @@ public class LoginLogoutTest {
 		homePage = myaccountpage.goToHomePage();
 		womenPage = homePage.goToWomenPage();
 		womenPage.selectShoppingCriteria();
-		womenPage.AddToCart();
+		cartSummaryPage = womenPage.AddToCart();
+		cartSummaryPage.goToContactUsPage();
 	}
 	
 	
