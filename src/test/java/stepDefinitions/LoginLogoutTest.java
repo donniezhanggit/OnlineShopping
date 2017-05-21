@@ -29,7 +29,9 @@ public class LoginLogoutTest {
 	
 	@Before("@setup")
 	public void beforetest(){
-		System.setProperty("webdriver.gecko.driver", "C:\\Roshu_selenium\\geckodriver-v0.13.0-win64\\geckodriver.exe");
+//		System.setProperty("webdriver.gecko.driver", "C:\\Roshu_selenium\\geckodriver-v0.13.0-win64\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Roshu_selenium\\geckodriver\\geckodriver.exe");
+
 		driver = new FirefoxDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -61,7 +63,7 @@ public class LoginLogoutTest {
 		myaccountpage.verifyAccountPage();
 		homePage = myaccountpage.goToHomePage();
 		womenPage = homePage.goToWomenPage();
-		womenPage.SelectCheckBoxes();
+		womenPage.selectShoppingCriteria();
 		womenPage.AddToCart();
 	}
 	
